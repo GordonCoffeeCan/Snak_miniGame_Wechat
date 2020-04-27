@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			font-size: 50px;
+			text-align: center;
+			background: linear-gradient(pink,purple,pink,purple);
+			-webkit-background-clip: text;
+			color: rgba(0,0,0,0);
+			width: 54%;
+			line-height: 50px;
+			margin:auto;
+		}
+		img{
+			width: 1500px;
+			height: 600px;
+		}
+		body{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569717809569&di=7d41f3bfc6b0b8e28a7b6acc0b9d1317&imgtype=0&src=http%3A%2F%2Fpic.linecg.com%2Fuploads%2Fvideo_sucai%2F189126%2F20150707%2F189126_1436282147_899.JPG">
+	<script>
+		var str="锦瑟无端五十弦，一弦一柱思华年。庄生晓梦迷蝴蝶，望帝春心托杜鹃。沧海月明珠有泪，蓝田日暖玉生烟。此情可待成追忆？只是当时已惘然。";
+		var result="";
+		var i=0;
+		var time=setInterval(function(){
+			result=result+str[i]
+		 	box.innerHTML=result;
+		 	i=i+1;
+		 	if(i==str.length){
+		 		clearInterval(time);
+		 	}
+		},100)
+	</script>
+</body>
+</html>
